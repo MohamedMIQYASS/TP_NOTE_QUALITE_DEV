@@ -61,6 +61,26 @@ public class AppTest
         assertTrue(ce_soir.estComplet());
     }
 
-    
+    public Double prixRevientMoyen(Menu m ){
+        Double prixmoyen = 0.0;
+        for (Plat plat : entrees){
+            prixmoyen += plat.prix_de_revient()
+        }
+        for (Plat plat : plats_principaux){
+            prixmoyen += plat.prix_de_revient()
+        }
+        for (Plat plat : desserts){
+            prixmoyen += plat.prix_de_revient()
+        }
+    }
+
+    public Boolean ContientViande(Plat p){
+        if(p.contient_viande == true){
+            return true;
+
+        }
+        return false;
+
+    }
 
 }
