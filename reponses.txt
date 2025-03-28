@@ -1,0 +1,103 @@
+# Qualité de développement — TP Noté
+
+# 1 Prendre ses marques
+
+# Question 1 : Combien y a-t-il de branches dans ce dépôt git ? Quelle est la branche courante ?
+
+il y'en a 4 :
+
+json
+* master
+  pom_xml
+  remotes/origin/master
+
+commande : git branch -a
+
+# Question 2: Qui a créé le dernier commit du dépôt ? Quand a été introduit le premier test pour la classe Menu ?
+
+commande : git log 
+
+Celui qui a crée le dernier commit de ce dépot est Joaquin "Joe"
+
+Le premier de test de la classe menu a été introduit le mardi 26 à 19:01
+
+# Question 3 : Quel est le dernier commit commun aux branches pom_xml et master ? 
+
+commande : git merge-base pom_xml master 
+
+resultat : f8c7c79e662cc640e4fc8e86605508720e958ef3
+
+commande 2 : git show f8c7c79e662cc640e4fc8e86605508720e958ef3
+
+le dernier commit communs entre pom_xml et master  est celui ci :
+
+commit f8c7c79e662cc640e4fc8e86605508720e958ef3 (pom_xml)
+Author: Bill Canard <Bill.Canard@univ-la-mare-aux-canards.fr>
+Date:   Tue Mar 26 18:32:52 2024 +0100
+
+    Changement de version de Java dans le pom.xml
+
+diff --git a/pom.xml b/pom.xml
+index ce7dcf9..5db00b1 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -14,8 +14,7 @@
+ 
+   <properties>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-    <maven.compiler.source>1.7</maven.compiler.source>
+-    <maven.compiler.target>1.7</maven.compiler.target>
++    <maven.compiler.release>17</maven.compiler.release>
+   </properties>
+ 
+   <dependencies>
+
+   Et pour les branches master et json ?
+
+commande : git merge-base master json
+
+resultat : 81837de83fe6e917756205c77a7d03e6caf422e3
+
+commande 2 :  git show 81837de83fe6e917756205c77a7d03e6caf422e3
+
+le dernier commit communs entre pom_xml et master  est celui ci :
+
+commit 81837de83fe6e917756205c77a7d03e6caf422e3
+Author: Hajira Lajir-Haff <Hajira.Lajir-Haff@univ-lahaut.be>
+Date:   Tue Mar 26 19:06:07 2024 +0100
+
+    ajout de la classe Menu
+
+diff --git a/src/main/java/fr/univ_orleans/iut45/menus/Menu.java b/src/main/java/fr/univ_orleans/iut45/menus/Menu.java
+new file mode 100644
+index 0000000..d767650
+--- /dev/null
++++ b/src/main/java/fr/univ_orleans/iut45/menus/Menu.java
+@@ -0,0 +1,29 @@
++package fr.univ_orleans.iut45.menus;
++
++import java.util.List;
++
++class Menu {
++    protected List<Plat> entrees;
++    protected List<Plat> plats_principaux;
++    protected List<Plat> desserts;
++
++    public Menu(List<Plat> entrees,
++                List<Plat> plats_principaux,
+
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
