@@ -110,6 +110,24 @@ Donc de ce fait , il n' y a aucune modifications qui n'a pas été commitées
 
 # Question 5 : Faire le nécessaire pour que git ignore dorénavent les changements dans le répertoire targe
 
+étape 1 : création d'un fichier .gitignore au sein du fichier principal
+
+étape 2 : écrire /target sur le fichier git ignore pour qu'il puisse ignorer les commits dans ce repertoire 
+
+# question 6 : Est-ce que dans l’état actuel du dépôt, tous les tests passent ? Est-ce conforme à  la démarche TDD ? Faites en sorte que les tests passent.
+
+étape 1 : se rendre sur le répertoire du fichier apptest.java 
+
+commande : cd src/test/java/fr/univ_orleans/iut45/menus/
+
+étape 2 :  utiliser cette commande pour compiler le fichier java :
+
+javac -cp .:menus-0.1-TPN.jar AppTest.java
+
+Malheureusement , tous les tests ne passent pas et ceci n'est pas conforme à la demarche TDD 
+
+
+
 
 
 
