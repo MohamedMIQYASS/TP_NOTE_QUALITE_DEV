@@ -88,7 +88,33 @@ index 0000000..d767650
 
 
 
-# 
+# Question 4 : Est-ce qu’il y a des choses dans la copie de travail qui ne sont pas encore commitées ? Lesquelles ? Est-il pertinent de les commiter ? Si oui, le faire.
+
+commande : git status
+
+resultat :
+
+Sur la branche master
+Votre branche est à jour avec 'origin/master'.
+
+Modifications qui ne seront pas validées :
+  (utilisez "git add <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git restore <fichier>..." pour annuler les modifications dans le répertoire de travail)
+	modifié :         reponses.txt
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+
+
+Donc de ce fait , il n' y a aucune modifications qui n'a pas été commitées 
+
+
+# Question 5 : Faire le nécessaire pour que git ignore dorénavent les changements dans le répertoire targe
+
+
+
+
+
+
 
 
 
